@@ -1,5 +1,3 @@
-function solution(participant, completion) {}
-
 const assert = require("assert");
 
 assert(solution(["leo", "kiki", "eden"], ["eden", "kiki"]) === "leo");

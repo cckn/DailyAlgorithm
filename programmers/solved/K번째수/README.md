@@ -5,6 +5,8 @@
   - 당연히 value 기반일 줄... 
   - 구글링 해보고 알게 됐다. 
 
+
+## 풀이 기록 
 ### [최초의 내 풀이](./index.js)
 -  commands 반복 
    -  command를 destructuring 이용하여 begin, end, index로 분리한다 
