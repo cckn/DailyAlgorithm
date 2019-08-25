@@ -1,0 +1,15 @@
+{
+    "name": "DailyAlgorithm",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/cckn/DailyAlgorithm.git",
+    "author": "cckn <cckn1985@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "start": "nodemon app.js",
+        "test": "node test.js"
+    },
+    "dependencies": {
+        "nodemon": "^1.19.1"
+    }
+}
