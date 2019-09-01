@@ -12,6 +12,7 @@
 | 2019/08/28 |          [프린터](./programmers/solved/프린터/README.md)          |    ✅    |
 | 2019/08/29 |     [가장 큰 수](./programmers/solved/가장%20큰%20수/README.md)     |    ✅    |
 | 2019/08/29 |        [베스트앨범](./programmers/solved/베스트앨범/README.md)        |    ✅    |
+| 2019/09/02 |    [디스크 컨트롤러](./programmers/solved/디스크%20컨트롤러/README.md)    |    ✅    |
 
 
 

@@ -25,8 +25,3 @@ function solution(jobs) {
             return Math.floor(processTime / jobsCount);
     }
 }
-
-const results = [solution([[1, 9], [0, 3], [2, 6]])];
-const expects = [9];
-
-results.forEach((result, idx) => console.log(result, result === expects[idx]));
