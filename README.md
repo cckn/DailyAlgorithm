@@ -13,6 +13,8 @@
 | 2019/08/29 |     [가장 큰 수](./programmers/solved/가장%20큰%20수/README.md)     |    ✅    |
 | 2019/08/29 |        [베스트앨범](./programmers/solved/베스트앨범/README.md)        |    ✅    |
 | 2019/09/02 |    [디스크 컨트롤러](./programmers/solved/디스크%20컨트롤러/README.md)    |    ✅    |
+| 2019/09/02 |            [탑](./programmers/solved/탑/README.md)            |    ✅    |
+| 2019/09/02 | [다리를 건너는 트럭](./programmers/solved/다리를%20건너는%20트럭/README.md) |    ✅    |
 
 
 
