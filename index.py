@@ -1,25 +1,54 @@
-def findIndex(list, func):
-    for idx, element in enumerate(list):
-        if func(element):
-            return idx
-    else:
-        return idx
+STRUCT_PILLAR = 0
+STRUCT_FLOOR = 1
+
+ACTION_REMOVE = 0
+ACTION_SET = 1
 
 
-def solution(prices):
-    result = []
-    for idx, price in enumerate(prices):
-        find = findIndex(prices[idx:], lambda x: x < price)
-        result.append(find)
+def solution(n, build_frame):
 
-        # if find == -1:
-        #     result.append(len(prices) - idx - 1)
-        # else:
-        #     result.append(find)
-    return result
+    pillar = [[None]*n for i in range(n)]
+    floor = [[None]*n for i in range(n)]
+    print(pillar, floor,  sep="\n")
+
+    answer = [[]]
+
+    for req in build_frame:
+        x = req[0]
+        y = req[1]
+        struct = req[2]
+        action = req[3]
+        print('X {x} , Y {y}, ST {struct}, ACT {action}'.format(
+            x=x, y=y, struct=struct, action=action))
+
+        if action is ACTION_SET:
+            if struct is STRUCT_PILLAR:
+                pillar[x][y][0] = True
+            else:
+                pillar[x][y][0] = True
+
+            print("set")
+        if action is ACTION_REMOVE:
+            print("REMOVE")
+
+        # print(pframe)
+    return answer
 
 
-# print(solution([1]	), "[0]")
-print(solution([1, 2, 3, 4, 5]	), "[4,3,2,1,0]")
-print(solution([1, 2, 3, 2, 3]	), "[4, 3, 1, 1, 0]")
-print(solution([1, 2, 3, 2, 3]	), "[4, 3, 1, 1, 0]")
+def build(frame, x, y, struct, action):
+    size = len(frame)
+
+    if action is ACTION_SET:
+        if struct is STRUCT_PILLAR:
+            frame[x][y] = True
+        else:
+            frame[x][y] = True
+
+    print("set")
+    if action is ACTION_REMOVE:
+        print("REMOVE")
+    # frame[x][y]
+    print(size)
+
+
+print(solution(3, [[1, 0, 0, 1]]))

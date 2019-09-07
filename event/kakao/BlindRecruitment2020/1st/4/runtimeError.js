@@ -1,37 +1,32 @@
 function solution(words, queries) {
   const result = []
-  queries = queries.map((query, idx) => {
-    return { idx, query }
-  })
 
-  queries.sort((a, b) => b.query.length - a.query.length)
-  queries.forEach((queryObj) => {
-    const { query, idx } = queryObj
-    console.log(result)
-
+  queries.forEach((query) => {
     const already = result.find((item) => {
-      return isMatch(query, item.query)
+      if (isMatch(query, item.query)) {
+        return true
+      }
     })
 
+    let match
     if (already) {
       if (already.query === query) {
-        result.push({ ...already, idx })
-        return
+        result.push(already)
+      } else {
+        match = already.match.filter((word) => {
+          return isMatch(word, query)
+        })
+        result.push(already)
       }
-      const match = already.match.filter((word) => {
+    } else {
+      match = words.filter((word) => {
         return isMatch(word, query)
       })
-      result.push({ idx, query, match })
-      return
     }
-
-    const match = words.filter((word) => {
-      return isMatch(word, query)
-    })
-    result.push({ idx, query, match })
+    result.push({ query, match })
   })
 
-  return result.sort((a, b) => a.idx - b.idx).map((item) => item.match.length)
+  return result.map((item) => item.match.length)
 }
 
 const isMatch = (src, query) => {
@@ -66,7 +61,7 @@ console.log('')
 console.log(
   solution(
     ['frodo', 'front', 'frost', 'frozen', 'frame', 'kakao'],
-    ['fro??', '????o', 'fr???', 'fro???', 'pro?', 'fr???', 'ddds?', 'frod?'],
+    ['fro??', '????o', 'fr???', 'fro???', 'pro?'],
   ),
   [3, 2, 4, 1, 0],
 )
