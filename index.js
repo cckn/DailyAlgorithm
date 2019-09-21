@@ -5,7 +5,7 @@ function solution(triangle) {
     }
   })
 
-  console.log(triangle)
+  // console.log(process.env.npm_config_node_version)
   return Math.max(...triangle.pop())
 }
 

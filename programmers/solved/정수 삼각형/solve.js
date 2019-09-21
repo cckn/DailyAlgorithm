@@ -5,7 +5,6 @@ function solution(triangle) {
     }
   })
 
-  console.log(triangle)
   return Math.max(...triangle.pop())
 }
 
