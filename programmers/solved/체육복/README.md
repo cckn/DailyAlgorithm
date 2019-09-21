@@ -1,4 +1,4 @@
-# [탑](https://programmers.co.kr/learn/courses/30/lessons/42862)
+# [체육복](https://programmers.co.kr/learn/courses/30/lessons/42862)
 
 ## 풀이 방법
 - 입력된 parameters를 이용해 체육복 배열 생성 
