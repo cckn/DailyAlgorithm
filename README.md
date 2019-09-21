@@ -17,6 +17,8 @@
 | 2019/09/02 | [다리를 건너는 트럭](./programmers/solved/다리를%20건너는%20트럭/README.md) |   JS   |    ✅    |
 | 2019/09/02 |         [주식가격](./programmers/notYet/주식가격/README.md)         | Python |    ❌    |
 | 2019/09/03 |    [Event-JsConf2019](./event/jsConfKorea2019/README.md)    |   JS   |    ✅    |
+| 2019/09/07 |                      [Event-Kakao2019]                      |   JS   |   ✅❌    |
+| 2019/09/21 |          [체육복](./programmers/solved/체육복/README.md)          |   JS   |    ✅    |
 
 
 
