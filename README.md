@@ -2,6 +2,17 @@
 
 
 
+## Event
+
+
+|    Date    |                    Algorithm                    | Lang  | Solve |
+| :--------: | :---------------------------------------------: | :---: | :---: |
+| 2019/09/03 | [JsConf2019](./event/jsConfKorea2019/README.md) |  JS   |  👍   |
+| 2019/09/07 |        [Kakao](./event/kakao/README.md)         |  JS   |  😞   |
+| 2019/09/22 |         [Line](./event/line/README.md)          |  JS   |  👍   |
+
+
+
 ## [Programmers](https://programmers.co.kr/)
 
 
@@ -16,8 +27,6 @@
 | 2019/09/02 | Stack/Queue |            [탑](./programmers/solved/탑/README.md)            |   JS   |   ✅   |
 | 2019/09/02 | Stack/Queue | [다리를 건너는 트럭](./programmers/solved/다리를%20건너는%20트럭/README.md) |   JS   |   ✅   |
 | 2019/09/02 | Stack/Queue |         [주식가격](./programmers/notYet/주식가격/README.md)         | Python |   ❌   |
-| 2019/09/03 |             |    [Event-JsConf2019](./event/jsConfKorea2019/README.md)    |   JS   |   ✅   |
-| 2019/09/07 |             |                      [Event-Kakao2019]                      |   JS   |  ✅❌   |
 | 2019/09/21 |   Greedy    |          [체육복](./programmers/solved/체육복/README.md)          |   JS   |   ✅   |
 | 2019/09/21 |     DP      |      [정수 삼각형](./programmers/solved/정수%20삼각형/README.md)      |   JS   |   ✅   |
 | 2019/09/22 |     DFS     |       [타겟 넘버](./programmers/solved/타겟%20넘버/README.md)       |   JS   |   ✅   |

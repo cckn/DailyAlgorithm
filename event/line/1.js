@@ -12,17 +12,10 @@ function solution(consumer, queue) {
   let time = 0
   while (processing.length != 0 || queue.length != 0) {
     while (queue.length && processing.length < consumer) {
-      const work = queue.shift()
-      if (work) {
-        processing.push(work)
-      }
+      processing.push(queue.shift())
     }
-
     processing = processing.map((work) => work - 1).filter((work) => work != 0)
     time++
-    console.log(time)
   }
   console.log(time)
 }
-
-solution(2, ['0'])
