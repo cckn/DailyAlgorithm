@@ -1,18 +1,20 @@
-function solution(N, number) {
-  console.log(N, number)
+function solution(s) {
+  return Array.from(s)
+    .sort()
+    .reverse()
+    .join('')
 }
+
 //////////////////////////
 
 const { algoTest } = require('./utils')
 
 const testFunc = solution
 const params = [
-  [5, 12], //
-  [2, 11],
+  'Zbcdefg', //
 ]
 const expects = [
-  4, //
-  3,
+  'gfedcbZ', //
 ]
 
 algoTest(testFunc, params, expects)

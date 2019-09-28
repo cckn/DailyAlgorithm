@@ -1,18 +1,22 @@
-function solution(N, number) {
-  console.log(N, number)
+function solution(s) {
+  return parseInt(
+    Array.from(s.toString())
+      .sort()
+      .reverse()
+      .join(''),
+  )
 }
+
 //////////////////////////
 
 const { algoTest } = require('./utils')
 
 const testFunc = solution
 const params = [
-  [5, 12], //
-  [2, 11],
+  118372, //
 ]
 const expects = [
-  4, //
-  3,
+  873211, //
 ]
 
 algoTest(testFunc, params, expects)
