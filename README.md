@@ -5,11 +5,12 @@
 ## Event
 
 
-|    Date    |                    Algorithm                    | Lang  | Solve |
-| :--------: | :---------------------------------------------: | :---: | :---: |
-| 2019/09/03 | [JsConf2019](./event/jsConfKorea2019/README.md) |  JS   |  👍   |
-| 2019/09/07 |        [Kakao](./event/kakao/README.md)         |  JS   |  😞   |
-| 2019/09/22 |         [Line](./event/line/README.md)          |  JS   |  👍   |
+|    Date    |                             Algorithm                             |    Lang    | Solve |
+| :--------: | :---------------------------------------------------------------: | :--------: | :---: |
+| 2019/09/03 |          [JsConf2019](./event/jsConfKorea2019/README.md)          |     JS     |  👍   |
+| 2019/09/07 |                 [Kakao](./event/kakao/README.md)                  |     JS     |  😞   |
+| 2019/09/22 |                  [Line](./event/line/README.md)                   |     JS     |  👍   |
+| 2019/09/28 | [Programmers-Jobfair](./event/programmers/2019-jobfair/README.md) | JS, Python |  👍   |
 
 
 
