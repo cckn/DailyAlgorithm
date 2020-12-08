@@ -1,6 +1,6 @@
 const algoTest = (testFunction, params, expects) => {
   params.forEach((param, idx) => {
-    const result = testFunction(...param)
+    const result = testFunction(param)
     const expect = expects[idx]
 
     let isMatch = result === expect
