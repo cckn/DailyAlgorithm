@@ -1,4 +1,4 @@
-# 크레인 인형뽑기 게임
+# [크레인 인형뽑기 게임](https://programmers.co.kr/learn/courses/30/lessons/64061?language=javascript)
 
 | 내 풀이 | 베스트 풀이 | 2번째 풀이            | 용량    |
 | ------- | ----------- | --------------------- | ------- |
@@ -14,9 +14,9 @@
 | 0.64ms, | 0.47ms,     | 통과 (0.32ms, 29.9MB) | 30.2MB) |
 | 0.94ms, | 0.63ms,     | 통과 (0.42ms, 30.2MB) | 30.1MB) |
 
-[최초의 내 풀이](./20201208_1.js)
+[최초의 내 풀이](https://github.com/cckn/TIL/blob/master/algorithm/2020/%ED%81%AC%EB%A0%88%EC%9D%B8%20%EC%9D%B8%ED%98%95%EB%BD%91%EA%B8%B0/20201208_1.js)
 
-[프로그래머스 베스트 풀이](./ref.js)
+[프로그래머스 베스트 풀이](https://github.com/cckn/TIL/blob/master/algorithm/2020/%ED%81%AC%EB%A0%88%EC%9D%B8%20%EC%9D%B8%ED%98%95%EB%BD%91%EA%B8%B0/ref.js)
 
 ## 최초 풀이 과정
 
@@ -47,4 +47,4 @@
   - 전체적으로 쓰는 변수들은 위로
   - 지역적으로 쓰는 변수는 아래에서 써도 무방할 듯
 
-[개선](./20201208_2.js)
+[개선된 풀이](https://github.com/cckn/TIL/blob/master/algorithm/2020/%ED%81%AC%EB%A0%88%EC%9D%B8%20%EC%9D%B8%ED%98%95%EB%BD%91%EA%B8%B0/20201208_2.js)
