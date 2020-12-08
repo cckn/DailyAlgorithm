@@ -1,20 +1,16 @@
-function solution(num) {
-  let count = 0
+function solution(w, h) {
+  console.log(w, h)
 
-  while (num !== 1 && count++ <= 500) {
-    num = num % 2 ? num * 3 + 1 : (num /= 2)
-  }
-
-  return num === 1 ? count : -1
+  var answer = 1
+  return answer
 }
 //////////////////////////
 
-const { algoTest } = require('./utils')
+import { algoTest } from './utils.js'
 
-const testFunc = solution
-const params = [6, 16, 626331, 1]
-const expects = [8, 4, -1, 0]
+const results = [solution(8, 12)]
+const expects = [80]
 
-algoTest(testFunc, params, expects)
+algoTest(results, expects)
 
-console.log(params)
+console.log(results)

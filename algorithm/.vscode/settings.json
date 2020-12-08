@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+    "2019": true,
+    "LICENSE": true,
+    "package.json": true,
+    "package-lock.json": true,
+    ".gitignore": true,
+    ".prettierrc": true,
+    "yarn.lock": true,
+    ".vscode": true,
+    "README.md": true
+  }
+}

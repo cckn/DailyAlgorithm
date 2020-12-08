@@ -1,5 +1,5 @@
 {
-  "name": "DailyAlgorithm",
+  "name": "til",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/cckn/DailyAlgorithm.git",
@@ -17,5 +17,6 @@
   },
   "devDependencies": {
     "jest": "^24.9.0"
-  }
+  },
+  "type": "module"
 }
