@@ -14,7 +14,7 @@ const algoTest = (testFunction, params, expects) => {
     \t\t\t${isMatch ? '' : 'plz check this param'}
     ----------------
     `
-    console.log('\n', param)
+    console.log(param)
     console.log(resultMsg)
   })
 }

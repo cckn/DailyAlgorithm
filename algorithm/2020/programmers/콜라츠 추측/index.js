@@ -1,7 +1,8 @@
 function solution(num) {
   let count = 0
+  const maxCount = 500
 
-  while (num !== 1 && count++ <= 500) {
+  while (num !== 1 && count++ <= maxCount) {
     num = num % 2 ? num * 3 + 1 : (num /= 2)
   }
 
