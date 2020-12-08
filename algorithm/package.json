@@ -6,7 +6,7 @@
   "author": "cckn <cckn1985@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon src/index.js",
     "test": "jest",
     "py": "python index.py"
   },
