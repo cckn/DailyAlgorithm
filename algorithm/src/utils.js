@@ -1,19 +1,24 @@
-const algoTest = ( results, expects) => {
-  results.forEach((result, idx) => {
+const algoTest = (testFunction, params, expects) => {
+  params.forEach((param, idx) => {
+    const result = testFunction(...param)
     const expect = expects[idx]
 
     let isMatch = result === expect
     if (Array.isArray(expect)) {
       isMatch = arrayMatch(result, expect)
     }
-
-    const resultMsg = `
+    if (!isMatch) {
+      const resultMsg = `
     result -> ${result} 
     expect -> ${expect}
     \t\t\t${isMatch ? '' : 'plz check this param'}
     ----------------
     `
-    console.log(resultMsg)
+      console.log(param)
+      console.log(resultMsg)
+    } else {
+      console.log(`result -> ${result}  expect -> ${expect} `)
+    }
   })
 }
 
@@ -30,4 +35,4 @@ const arrayMatch = (arr1, arr2) => {
   return true
 }
 
-export  { algoTest }
+export { algoTest }

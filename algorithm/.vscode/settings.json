@@ -1,6 +1,11 @@
 {
   "files.exclude": {
     "2019": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
     "LICENSE": true,
     "package.json": true,
     "package-lock.json": true,
@@ -8,6 +13,8 @@
     ".prettierrc": true,
     "yarn.lock": true,
     ".vscode": true,
-    "README.md": true
-  }
+    "README.md": true,
+    "node_modules": true
+  },
+  "explorerExclude.backup": null
 }

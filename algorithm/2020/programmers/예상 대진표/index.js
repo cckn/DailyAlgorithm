@@ -1,6 +1,12 @@
-function solution(lines) {
-  console.log(lines)
-  var answer = 0
+function solution(n, a, b) {
+  const f = (n) => Math.ceil(n / 2)
+  let answer = 0
+
+  while (a !== b) {
+    a = f(a)
+    b = f(b)
+    answer++
+  }
   return answer
 }
 //////////////////////////
