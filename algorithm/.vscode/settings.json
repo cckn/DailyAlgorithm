@@ -14,7 +14,8 @@
     "yarn.lock": true,
     ".vscode": true,
     "README.md": true,
-    "node_modules": true
+    "node_modules": true,
+    "2020\\programmers\\20201209": true
   },
   "explorerExclude.backup": null
 }

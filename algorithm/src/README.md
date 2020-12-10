@@ -1,119 +1,56 @@
-# [추석 트래픽](https://programmers.co.kr/learn/courses/30/lessons/17676?language=javascript)
-
-## 문제 설명
-
-### 추석 트래픽
-
-이번 추석에도 시스템 장애가 없는 명절을 보내고 싶은 어피치는 서버를 증설해야 할지 고민이다. 장애 대비용 서버 증설 여부를 결정하기 위해 작년 추석 기간인 9월 15일 로그 데이터를 분석한 후 초당 최대 처리량을 계산해보기로 했다. 초당 최대 처리량은 요청의 응답 완료 여부에 관계없이 임의 시간부터 1초(=1,000밀리초)간 처리하는 요청의 최대 개수를 의미한다.
-
-### 입력 형식
-
-solution 함수에 전달되는 lines 배열은 N(1 ≦ N ≦ 2,000)개의 로그 문자열로 되어 있으며, 각 로그 문자열마다 요청에 대한 응답완료시간 S와 처리시간 T가 공백으로 구분되어 있다.
-응답완료시간 S는 작년 추석인 2016년 9월 15일만 포함하여 고정 길이 2016-09-15 hh:mm:ss.sss 형식으로 되어 있다.
-처리시간 T는 0.1s, 0.312s, 2s 와 같이 최대 소수점 셋째 자리까지 기록하며 뒤에는 초 단위를 의미하는 s로 끝난다.
-예를 들어, 로그 문자열 2016-09-15 03:10:33.020 0.011s은 2016년 9월 15일 오전 3시 10분 **33.010초**부터 2016년 9월 15일 오전 3시 10분 **33.020초**까지 **0.011초** 동안 처리된 요청을 의미한다. (처리시간은 시작시간과 끝시간을 포함)
-서버에는 타임아웃이 3초로 적용되어 있기 때문에 처리시간은 0.001 ≦ T ≦ 3.000이다.
-lines 배열은 응답완료시간 S를 기준으로 오름차순 정렬되어 있다.
-출력 형식
-solution 함수에서는 로그 데이터 lines 배열에 대해 초당 최대 처리량을 리턴한다.
+# [N으로 표현](https://programmers.co.kr/learn/courses/30/lessons/42895)
 
 ## 풀이
 
-카카오 문제인만큼 푸는 재미가 있을 듯 하다.
+너비 우선 탐색으로 접근하면 될거 같다
+N이 늘어나는 케이스는 다음과 같다.
 
-고민을 해보자
+- `+ N`
+- `- N`
+- `\* N`
+- `// N`
+- `NN...`
 
-1. 주어진 문자열을 사용하기 좋은 형태의 데이터로 가공하자.
-   1. 문제가 복잡하고 소스가 긴만큼 짧고 아름다운 소스코드보다는 가독성에 집중하자.
-2. 가공된 데이터를 각 측정 포인트별로 나눈다.
-3. 측정된 포인트를 sort한다
-   1. 시간은 오름차순
-   2. 시간이 같은 경우 start를 앞에 오도록 정렬한다.
-4. 측정 포인트를 순회하며 카운트를 측정한다.
-   1. start에서는 + 1
-   2. end에서는 -1
-5. 순회 중 가장 높았던 값을 반환한다.
+잘 생각해보면 아래같은 경우 또한 존재한다
 
-#### 최초 풀이
+- `+ NN...`
+- `- NN...`
+- `\* NN...`
+- `// NN...`
+
+N이 한자리 수일때 *11은 NN이 되는 결과를 주지만
+NN일 때 *11은 과연??
+
+`f(N) === NN` 이고 `f(NN) === NNN`이 되는 식을 찾아야함.
+
+숫자를 문자열로 바꾸고 N을 붙이고 다시 parseInt하면 되겠다
 
 ```javascript
-function solution(lines) {
-  let _lines = lines.map((line) => {
-    return {
-      end: Date.parse(line.split(' ').slice(0, 2)),
-      time: parseFloat(line.split(' ')[2].replace('s', '')) * 1000 - 1,
-    }
-  })
-  _lines = _lines
-    .reduce((acc, cur) => {
-      const { end, time } = cur
-      acc.push([end + 1000, -1])
-      acc.push([end - time, 1])
-      return acc
-    }, [])
-    .sort((a, b) => {
-      return a[0] !== b[0] ? a[0] - b[0] : b[1] - a[1]
-    })
 
-  console.log(_lines)
-  let maxNum = 0
-  let count = 0
-  for (const line of _lines) {
-    count += line[1]
-    maxNum = maxNum < count ? count : maxNum
+function f(N) {
+
+
+  return N.toString()+
+}
+```
+
+함수를 만들자
+
+```javascript
+function bfs(depth, N, number) {
+  if (N === number) {
+    return depth
   }
-  return maxNum
 }
 ```
 
-#### 개선하자
+근데 내가 만들려는게 깊이 우선 같은데
+너비는 어떻게 만들지
 
-쫒겨 짜다보니 소스코드에 먹히듯이 구현함.
-복습할 겸 백지에서 다시 짜보자
+### 최초 풀이
 
-### 다시 풀이
+### 개선사항
 
-- 데이터부터 맞추고 시작하자
-- 예제에 주어진 데이터를 보고 정확하게 맞추고 나머지 부분을 구현하도록 한다.
-
-```javascript
-function solution(lines) {
-  const TYPE = { start: 1, end: -1 }
-
-  let count = 0
-  let max = 0
-
-  const _lines = lines
-    .map((line) => {
-      line = line.split(' ')
-      const end = Date.parse(line.slice(0, 2).join())
-      const time = parseFloat(line[2].replace('s', '')) * 1000 - 1
-      const start = end - time
-      return [start, end + 1000 - 1]
-    })
-    .reduce((arr, cur) => {
-      arr.push({ time: cur[0], type: TYPE.start })
-      arr.push({ time: cur[1], type: TYPE.end })
-      return arr
-    }, [])
-    .sort((a, b) => {
-      return a.time !== b.time ? a.time - b.time : b.type - a.type
-    })
-
-  _lines.forEach((x) => {
-    count += x.type
-    max = max < count ? count : max
-  })
-
-  return max
-}
-```
+### 최종 풀이
 
 ## 주의사항
-
-- 시작점, 끝점에서 겹치는 경우 어떻게 처리하는지 확인하자
-- 문제를 두 번이나 잘 못 읽어서 낭패를 봤다
-  - 처음에는 주어진 시간이 시작 시간인줄 알았고
-  - 수정하고 나서도 안되길래 확인해보니 **초당 최대 처리량**이라는 부분을 놓쳐서 삽질했다
-  - 처리시간에 유의하자. 100ms ~ 110 ms 동작했다면 10ms 동안 동작한 것이라고 생각하기 쉽지만 사실은 11ms 동작하였다.
-- 문제가 길 수록 잘 읽어보고 달려들자

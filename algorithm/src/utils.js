@@ -7,17 +7,17 @@ const algoTest = (testFunction, params, expects) => {
     if (Array.isArray(expect)) {
       isMatch = arrayMatch(result, expect)
     }
-    if (!isMatch) {
-      const resultMsg = `
-    result -> ${result} 
-    expect -> ${expect}
-    \t\t\t${isMatch ? '' : 'plz check this param'}
-    ----------------
-    `
-      console.log(param)
-      console.log(resultMsg)
+
+    if (isMatch) {
+      console.log(`Match :: result : ${result}, expect : ${expect} `)
     } else {
-      console.log(`result -> ${result}  expect -> ${expect} `)
+      console.log(`
+      ------------------------------------------------------
+      \t param is ${param}
+      
+      \t result -> ${result} 
+      \t expect -> ${expect}
+      ------------------------------------------------------`)
     }
   })
 }
