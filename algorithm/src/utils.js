@@ -1,4 +1,4 @@
-const algoTest = (testFunction, params, expects) => {
+const algorithmTest = (testFunction, params, expects) => {
   params.forEach((param, idx) => {
     const result = testFunction(...param)
     const expect = expects[idx]
@@ -35,4 +35,4 @@ const arrayMatch = (arr1, arr2) => {
   return true
 }
 
-export { algoTest }
+export { algorithmTest }

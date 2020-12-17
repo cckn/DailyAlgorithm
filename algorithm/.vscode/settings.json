@@ -7,7 +7,6 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "LICENSE": true,
-    "package.json": true,
     "package-lock.json": true,
     ".gitignore": true,
     ".prettierrc": true,
@@ -15,7 +14,8 @@
     ".vscode": true,
     "README.md": true,
     "node_modules": true,
-    "2020\\programmers\\20201209": true
+    "2020\\programmers\\20201209": true,
+    ".jshintrc": true
   },
   "explorerExclude.backup": null
 }
