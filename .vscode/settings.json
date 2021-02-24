@@ -1,24 +1,8 @@
 {
   "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
+    ".gitignore": true,
     ".prettierrc": true,
-    "algorithm\\yarn.lock": true,
-    "algorithm\\package-lock.json": true,
-    "algorithm\\LICENSE": true,
-    "algorithm\\.prettierrc": true,
-    "algorithm\\node_modules": true,
-    "algorithm\\2019": true,
-    "algorithm\\README.md": true,
-    "algorithm\\src\\index.spec.js": true,
-    "algorithm\\2020\\programmers\\20201209": true,
-    "algorithm\\.vscode": true,
-    "algorithm\\2020\\programmers\\20201217\\위장": true,
-    ".jshintrc": true,
-    ".gitignore": true
+    ".vscode": true
   },
   "explorerExclude.backup": null
 }
